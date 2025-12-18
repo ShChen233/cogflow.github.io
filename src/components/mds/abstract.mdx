@@ -1,3 +1,11 @@
 # Abstract
-
-Aute amet minim mollit nisi adipisicing cupidatat. Duis sit tempor consequat ea nisi qui consequat deserunt. Officia duis sit mollit dolor officia occaecat. Minim aute excepteur nostrud adipisicing magna nisi amet. Laborum aliqua ut ex cillum qui ipsum tempor officia sunt. Reprehenderit est ex sit fugiat laborum reprehenderit proident deserunt sint pariatur cillum voluptate irure. Voluptate laboris velit veniam exercitation sunt eiusmod occaecat velit fugiat ad.
+Despite recent advances, multimodal large language models continue to struggle with visual mathematical problem solving.
+Some recent works recognize that visual perception is a bottleneck in visual mathematical reasoning, but their solutions are limited to improving the extraction and interpretation of visual inputs.
+Notably, they all ignore the key issue of whether the extracted visual cues are faithfully integrated and properly utilized in subsequent reasoning.
+Motivated by this, we present \textsc{CogFlow}, a novel cognitive-inspired three-stage framework that incorporates a knowledge internalization stage, explicitly simulating the hierarchical flow of human reasoning: perception$\Rightarrow$internalization$\Rightarrow$reasoning.
+In line with this hierarchical flow, we holistically enhance all its stages.
+We devise synergistic visual rewards to boost perception capabilities in parametric and semantic spaces, jointly improving visual information extraction from symbols and diagrams.
+To guarantee faithful integration of extracted visual cues into subsequent reasoning, we introduce a visual-anchored reward model in the internalization stage, bridging perception and reasoning.
+Moreover, we design a visual-gated policy optimization algorithm to further enforce the reasoning is grounded with the visual knowledge, preventing models seeking shortcuts {that appear} coherent but are visually ungrounded reasoning chains.
+Moreover, we contribute a new dataset \textsc{MathCog} for model training, which contains samples with over 120K high-quality perception-reasoning aligned annotations.
+Comprehensive experiments and analysis on three commonly used visual mathematical reasoning benchmarks validate the superiority of the proposed \textsc{CogFlow}.
